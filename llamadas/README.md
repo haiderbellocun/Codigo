@@ -1,4 +1,4 @@
-# Proceso de llamadas CL Tiene (Copiar audios → Transcribir → Evaluar)
+# Proceso de llamadas (Copiar audios → Transcribir → Evaluar)
 
 Pipeline en **Python/Jupyter** para automatizar el QA de llamadas:
 
