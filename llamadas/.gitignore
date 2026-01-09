@@ -1,0 +1,40 @@
+# Entornos
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Datos / salidas (NO versionar)
+data/
+inputs/
+outputs/
+*.wav
+*.mp3
+*.wma
+*.m4a
+*.flac
+*.ogg
+*.aac
+*.txt
+*.xlsx
+*.csv
+*.json
+
+# Cache / logs
+*_cache/
+_ollama_cache/
+*.log
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets
+.env
+.sql_config.json
