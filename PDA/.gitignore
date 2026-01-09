@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Env/secrets
+.env
+
+# Outputs / data (NO versionar)
+downloads/
+shared/
+outputs/
+*.pdf
+*.csv
+*.xlsx
+*.json
+*.txt
+*.log
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
