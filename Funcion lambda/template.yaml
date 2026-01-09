@@ -1,0 +1,58 @@
+\
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Lambda que inicia AWS Transcribe cuando llega un audio a S3 (con validación por Excel de correos aprobados)
+
+Parameters:
+  OutBucketName:
+    Type: String
+    Description: Bucket donde Transcribe escribirá la salida (JSON)
+  ApprovedExcelBucket:
+    Type: String
+    Description: Bucket donde está el Excel de correos aprobados
+  ApprovedExcelKey:
+    Type: String
+    Description: Key (ruta) del Excel en S3 (ej: config/aprobados.xlsx)
+  OutPrefix:
+    Type: String
+    Default: txt/prue
+  Language:
+    Type: String
+    Default: auto
+  Speakers:
+    Type: Number
+    Default: 0
+
+Resources:
+  TranscribeStarterFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: python3.11
+      Handler: app.lambda_handler
+      CodeUri: src/
+      MemorySize: 512
+      Timeout: 60
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - Statement:
+            - Sid: ReadApprovedExcel
+              Effect: Allow
+              Action: [s3:GetObject]
+              Resource: !Sub "arn:aws:s3:::${ApprovedExcelBucket}/${ApprovedExcelKey}"
+            - Sid: StartTranscribe
+              Effect: Allow
+              Action: [transcribe:StartTranscriptionJob]
+              Resource: "*"
+      Environment:
+        Variables:
+          REGION: !Ref AWS::Region
+          OUT_BUCKET: !Ref OutBucketName
+          OUT_PREFIX: !Ref OutPrefix
+          LANGUAGE: !Ref Language
+          SPEAKERS: !Ref Speakers
+          BASE_VENTAS_BUCKET: !Ref ApprovedExcelBucket
+          BASE_VENTAS_KEY: !Ref ApprovedExcelKey
+
+Outputs:
+  FunctionName:
+    Value: !Ref TranscribeStarterFunction
