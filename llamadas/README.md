@@ -9,7 +9,6 @@ Pipeline en **Python/Jupyter** para automatizar el QA de llamadas:
    - (Opcional) **LLM local (Ollama)** para casos “borderline” o cuando aporta valor.
 4. **Exportar** un **Excel/CSV final** con etiquetas y campos auxiliares.
 
-> ⚠️ Repositorio pensado para uso interno. **No subas credenciales ni PII** (nombres, teléfonos, correos, grabaciones).
 
 ---
 
