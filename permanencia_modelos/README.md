@@ -8,7 +8,7 @@ Este repositorio organiza **6 modelos** para predicción de **deserción/permane
 
 ## Modelos incluidos
 
-### Tabulares (una fila por estudiante)
+### Modelos Tabulares (una fila por estudiante)
 1. **CatBoostClassifier**
 2. **LightGBM (LGBMClassifier)**
 3. **XGBoost (XGBClassifier)**
@@ -16,7 +16,7 @@ Este repositorio organiza **6 modelos** para predicción de **deserción/permane
 
 > Estos 4 se entrenan y predicen desde consola con `src/train.py` y `src/predict.py`.
 
-### Secuenciales / Semana (notebooks)
+### Deep learning / Semana (notebooks)
 5. **GRU (secuencial por semanas)** → `notebooks/deep/GRU.ipynb`  
 6. **Modelo por Semana** (LightGBM + explicabilidad/SHAP en notebook) → `notebooks/semana/mod_sem_1.ipynb`
 
