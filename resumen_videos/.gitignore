@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Env / secrets
+.env
+
+# Outputs / data (NO versionar)
+outputs/
+data/
+inputs/
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.wmv
+*.wav
+*.mp3
+*.m4a
+*.json
+*.txt
+*.srt
+*.vtt
+*.log
+*.xlsx
+*.csv
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
