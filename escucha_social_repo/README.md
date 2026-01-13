@@ -1,4 +1,4 @@
-# Escucha Social (Ollama) – Clasificación de Comentarios y Posts → df_sql listo para SQL
+# Escucha Social  – Clasificación de Comentarios y Posts → df_sql listo para SQL
 
 Este repo contiene un pipeline de **escucha social** que toma un dataset (Excel/CSV) con publicaciones y/o comentarios,
 usa **Ollama local** para clasificar, y exporta un Excel con:
@@ -12,7 +12,7 @@ Incluye:
 - Notebook original: `escucha_social.ipynb`
 - Script ejecutable: `src/escucha_social.py`
 
-> ⚠️ Seguridad: No subas PII ni datasets a Git. Ver `docs/SECURITY.md`.
+
 
 ---
 
