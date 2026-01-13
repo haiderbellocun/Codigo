@@ -1,0 +1,6 @@
+tensorflow>=2.15
+pandas>=2.1
+numpy>=1.26
+scikit-learn>=1.4
+python-dotenv>=1.0
+joblib>=1.3
