@@ -1,4 +1,4 @@
-# Predicción de posts (tendencias) – Escucha Social (Ollama)
+# Predicción de posts (tendencias) – Escucha Social
 
 Pipeline para **predecir temas/tendencias de publicaciones** por intervalos (ej. semanas de un mes)
 a partir de un histórico de posts, usando **Ollama local** para generar:
@@ -13,7 +13,7 @@ Incluye:
 - Notebook original: `tendencia.ipynb`
 - Script ejecutable: `src/predict_posts.py`
 
-> ⚠️ No subas datasets reales ni outputs con PII a Git. Ver `docs/SECURITY.md`.
+
 
 ---
 
