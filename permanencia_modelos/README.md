@@ -18,7 +18,7 @@ Este repositorio organiza **6 modelos** para predicción de **deserción/permane
 
 ### Secuenciales / Semana (notebooks)
 5. **GRU (secuencial por semanas)** → `notebooks/deep/GRU.ipynb`  
-6. **Modelo Semana 1** (LightGBM + explicabilidad/SHAP en notebook) → `notebooks/semana/mod_sem_1.ipynb`
+6. **Modelo por Semana** (LightGBM + explicabilidad/SHAP en notebook) → `notebooks/semana/mod_sem_1.ipynb`
 
 > Estos 2 se ejecutan desde los notebooks (por ahora). Si quieres, luego los pasamos a scripts CLI también.
 
@@ -105,7 +105,7 @@ python src/predict_tabular.py --model-path outputs/models/model_catboost.joblib 
 python src/train_gru.py --data data/df_secuencial.csv --id-col estudiante_id --time-col semana --target deserto
 ```
 
-## Semana 1 (LightGBM + SHAP)
+## modelo por Semanas  (LightGBM + SHAP)
 ```bash
 python src/train_semana1_lgbm.py --export-shap
 python src/predict_semana1_lgbm.py --data data/estudiantes_nuevos.csv
