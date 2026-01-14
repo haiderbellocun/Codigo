@@ -9,7 +9,7 @@ de reportes desde una página web (en tu caso, el flujo de **People Management �
 - Deduplicación multi-equipo con índice compartido (`processed_index.json`) y búsqueda de PDFs existentes
 - Scripts para lanzar Chrome con **remote debugging port** (recomendado)
 
-> ⚠️ Este proyecto automatiza un flujo web real. Asegúrate de cumplir Términos de Servicio, políticas internas y privacidad.
+
 Revisa `docs/COMPLIANCE.md`.
 
 ---
