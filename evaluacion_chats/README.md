@@ -11,7 +11,7 @@ Incluye:
 - Notebook original: `chats.ipynb`
 - Script ejecutable: `src/eval_chats.py`
 
-> ⚠️ Seguridad: este proyecto puede manejar datos personales. No subas chats reales ni credenciales a Git.
+
 Ver `docs/SECURITY.md`.
 
 ---
