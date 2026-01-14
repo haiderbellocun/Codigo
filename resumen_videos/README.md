@@ -13,7 +13,6 @@ Incluye:
 - Notebook: `resumen_video.ipynb`
 - Script: `src/resumen_videos.py`
 
-> ⚠️ No subas videos/transcripciones/outputs a Git.
 
 ---
 
