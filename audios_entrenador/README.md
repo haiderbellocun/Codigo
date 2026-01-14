@@ -10,7 +10,7 @@ Este repositorio reúne el flujo para trabajar con los **audios del entrenador**
 
 Incluye el notebook original: `audi_entrenador.ipynb`.
 
-> ⚠️ No subas audios/transcripciones/outputs ni `.env` a Git. Ver `docs/SECURITY.md`.
+
 
 ---
 
