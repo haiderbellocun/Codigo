@@ -4,13 +4,16 @@ Repo de **datos** para construir la base necesaria para:
 
 - **GRU (secuencial por semana)** → `outputs/datos_secuenciales_para_gru.csv.gz`
 - **Modelo semanal** (semana 1/3/8/12) → `outputs/dataset_semana_<w>.csv.gz`
+## Estructura del repo
+
+```text
 base_datos_gru_semana_repo/
 ├─ notebooks/
 │  └─ CODIGO_BASE_MODELO.ipynb          # notebook base (sanitizado: sin credenciales)
 ├─ src/
-│  ├─ extract.py                         # CLI: ejecuta extracción SQL → outputs/base_modelo.csv.gz
-│  ├─ build_gru.py                        # CLI: construye dataset secuencial GRU → outputs/datos_secuenciales_para_gru.csv.gz
-│  ├─ build_weekly.py                     # CLI: genera datasets por semana → outputs/dataset_semana_<w>.csv.gz
+│  ├─ extract.py                         # CLI: extracción SQL → outputs/base_modelo.csv.gz
+│  ├─ build_gru.py                        # CLI: dataset GRU → outputs/datos_secuenciales_para_gru.csv.gz
+│  ├─ build_weekly.py                     # CLI: datasets semanales → outputs/dataset_semana_<w>.csv.gz
 │  ├─ db/
 │  │  ├─ __init__.py
 │  │  └─ mssql.py                         # conexión SQL Server (SQLAlchemy + pyodbc) usando .env
@@ -20,28 +23,28 @@ base_datos_gru_semana_repo/
 │     ├─ build_gru_dataset.py             # lógica GRU: semanas 1..16 + one-hot + NaN por variables no disponibles
 │     └─ build_weekly_datasets.py         # lógica semanal: week=1/3/8/12 + one-hot + export CSV.gz
 ├─ sql/
-│  └─ base_modelo_query.sql               # plantilla de consulta para extraer la base desde SQL Server
+│  └─ base_modelo_query.sql               # plantilla consulta extracción SQL Server
 ├─ templates/
-│  ├─ vars_sem_1.txt                      # variables disponibles desde semana 1
-│  ├─ vars_sem_3_add.txt                  # variables que se agregan desde semana 3
-│  ├─ vars_sem_8_add.txt                  # variables que se agregan desde semana 8
-│  ├─ vars_sem_12_add.txt                 # variables que se agregan desde semana 12
-│  ├─ schema_gru.md                       # esquema esperado de salida para GRU (long format)
-│  └─ schema_semanal.md                   # esquema esperado de salida para datasets semanales
+│  ├─ vars_sem_1.txt
+│  ├─ vars_sem_3_add.txt
+│  ├─ vars_sem_8_add.txt
+│  ├─ vars_sem_12_add.txt
+│  ├─ schema_gru.md
+│  └─ schema_semanal.md
 ├─ docs/
-│  ├─ DOCUMENTATION.md                    # explicación técnica del pipeline (pasos + comandos)
-│  └─ SECURITY.md                         # qué NO subir (PII, outputs, .env)
+│  ├─ DOCUMENTATION.md
+│  └─ SECURITY.md
 ├─ scripts/
-│  ├─ run_all.ps1                         # corre todo (Windows): extract → gru → weekly
-│  └─ run_all.sh                          # corre todo (Linux/Mac): extract → gru → weekly
+│  ├─ run_all.ps1
+│  └─ run_all.sh
 ├─ tests/
-│  └─ test_imports.py                     # smoke test de imports
-├─ data/                                  # (ignorado) si quieres poner insumos locales
-├─ outputs/                               # (ignorado) aquí se generan CSV.gz (base/gru/weekly)
-├─ requirements.txt                       # dependencias del pipeline (pandas, sqlalchemy, pyodbc, dotenv)
-├─ .env.example                           # variables de entorno (SQL + rutas + nombres columnas)
-├─ .gitignore                             # ignora data/, outputs/, .env, csv, etc.
-└─ LICENSE                                # uso interno
+│  └─ test_imports.py
+├─ data/                                  # ignorado
+├─ outputs/                                # ignorado
+├─ requirements.txt
+├─ .env.example
+├─ .gitignore
+└─ LICENSE                              # uso interno
 
 
 
